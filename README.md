@@ -1,4 +1,39 @@
 # control-server
+Since it is still in its initial state, the code has exposed all of the sql access information, DB name, and table name
+
+It's not a daemon, but I combined the binary that compiled the cscript with the shellscript to make it work like a daemon<br>
+log_loop.sh &
+
+Parse every 5 minutes, push it into the database, remove the syslog file, recreate it, and restart the syslog daemon
+
+In regular expression (regex):
+
+Unique ID | Date | Time | Hostname | Program Name | Program PID | log message<br>
+Identifier<br> added because PID is not unique
+
+Code refactoring part: DB connection information and queries are exposed on the code as is <br>
+
+The actual working client part will be produced separately
+
+- Issues and add-ons
+- Information error due to different time zones for different servers (medium)
+- sql access information code exposed (high)
+- I have to schedule it to run shell scripts automatically when the server suddenly dies or turns on to prepare for a reboot... (high)
+- Create and compress data files (csv,json) in the database every day, and delete from syslog; (low) the existing database
+- Existing date and time were put in the same field but separated (complete)
+- Not searching for kernel at all (low)
+- Error causing error by entering unscaped string (complete)
+- Value entered oddly due to incorrect data segmentation (complete)
+*
+Self-Question Answering<br>
+Q: What types should be separated based on log messages <br>
+A: We receive and process the logs, but if we develop and implement it more than that, it's a +a element, so only basic functions are implemented right now
+
+kill -l
+Check the process or system status of other servers through the signal..?
+
+---
+
 아직 초기 상태이기 때문에 코드에 sql접속 정보랑 DB명, 테이블 이름 다 노출 되있음
 
 데몬은 아니지만 c스크립트를 컴파일한 바이너리와 쉘스크립트를 결합하여 데몬처럼 작동하게 놔둠<br>
@@ -9,13 +44,9 @@ log_loop.sh &
 정규표현식(regex)로 : 
 
 고유ID | 날짜 | 시간 | 호스트이름 | 프로그램 이름 | 프로그램 PID | log message<br>
-PID는 unique하지 않기 때문에 추가한 식별자
-
-쪼개서 넣음
-
-검색 잘 됨
+PID는 unique하지 않기 때문에 추가한 식별자<br>
 ￼
-코드 리팩터링 부분 : 코드 상에 DB 접속 정보 및 쿼리가 그대로 노출 되어 잇음
+코드 리팩터링 부분 : 코드 상에 DB 접속 정보 및 쿼리가 그대로 노출 되어 있음<br>
 
 실제로 작동하는 클라이언트 부분은 따로 제작 예정
 
