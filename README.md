@@ -1,4 +1,9 @@
 # control-server
+
+Visualize the amount of logs per host<br>
+<img width="1000" alt="파이썬시각화시간별 호스트로그" src="https://github.com/wngh1212/control-server/assets/88926634/9251d5c0-efea-457a-b2bf-d41ea7af1cbf">
+
+
 Since it is still in its initial state, the code has exposed all of the sql access information, DB name, and table name
 
 It's not a daemon, but I combined the binary that compiled the cscript with the shellscript to make it work like a daemon<br>
@@ -34,6 +39,9 @@ kill -l
 Check the process or system status of other servers through the signal..?
 
 ---
+
+호스트별 로그 양 시각화<br>
+<img width="1000" alt="파이썬시각화시간별 호스트로그" src="https://github.com/wngh1212/control-server/assets/88926634/9251d5c0-efea-457a-b2bf-d41ea7af1cbf">
 
 아직 초기 상태이기 때문에 코드에 sql접속 정보랑 DB명, 테이블 이름 다 노출 되있음
 
