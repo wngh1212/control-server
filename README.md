@@ -9,8 +9,8 @@ Parse every 5 minutes, push it into the database, remove the syslog file, recrea
 In regular expression (regex):
 
 Unique ID | Date | Time | Hostname | Program Name | Program PID | log message<br>
-Identifier<br> added because PID is not unique
-￼
+Identifier<br> added because PID is not unique<br>
+
 Code refactoring part: DB connection information and queries are exposed on the code as is <br>
 
 The actual working client part will be produced separately
@@ -25,7 +25,7 @@ The actual working client part will be produced separately
 - Error causing error by entering unscaped string (complete)
 - Value entered oddly due to incorrect data segmentation (complete)
 - Search, filter, create a part of the client for meaningful data processing (unknown)
-* ￼
+* 
 Self-Question Answering<br>
 Q: What types should be separated based on log messages <br>
 A: We receive and process the logs, but if we develop and implement it more than that, it's a +a element, so only basic functions are implemented right now
@@ -61,7 +61,7 @@ PID는 unique하지 않기 때문에 추가한 식별자<br>
     - 이스케이프 처리 안된 문자열 들어가서 에러 일으키는 오류 ( complete )
     - 데이터 분할이 잘 못 되서 값이 이상하게 들어감 (complete)
     - 검색,필터링 유의미한 데이터 처리를 위한 클라이언트 부분 제작 예정 ( unknown )
-* 
+*
 자체 질의 응답<br>
 Q : 로그 메세지 기반으로 어떤 유형을 분리해서가 되느냐 <br>
 A : 로그를 받아서 처리하는거지 그 이상으로 개발,구현을 하면 +a 적인 요소라 당장은 기본 기능만 구현
