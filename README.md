@@ -26,7 +26,6 @@ The actual working client part will be produced separately
 - I have to schedule it to run shell scripts automatically when the server suddenly dies or turns on to prepare for a reboot... (high)
 - Create and compress data files (csv,json) in the database every day, and delete from syslog; (low) the existing database
 - Existing date and time were put in the same field but separated (complete)
-- Not searching for kernel at all (low)
 - Error causing error by entering unscaped string (complete)
 - Value entered oddly due to incorrect data segmentation (complete)
 - Search, filter, create a part of the client for meaningful data processing (unknown)
@@ -62,7 +61,6 @@ PID는 unique하지 않기 때문에 추가한 식별자<br>
     - 갑자기 서버가 죽거나 재부팅을 대비하기 위해 켜질 때 자동으로 쉘 스크립트 실행하게 스케줄에 올려야 하는데… (high)
     - 데이터베이스의 데이터를 하루마다 데이터파일(csv,json) 생성 및 압축하고 기존의 데이터베이스는 delete from syslog; (low)
     - 기존의 날짜와 시간은 같은 필드에 넣었지만 분리하였음 (complete)
-    - 커널에 대한 서치가 전혀 되고 있지 않음 (low)
     - 이스케이프 처리 안된 문자열 들어가서 에러 일으키는 오류 ( complete )
     - 데이터 분할이 잘 못 되서 값이 이상하게 들어감 (complete)
     - 검색,필터링 유의미한 데이터 처리를 위한 클라이언트 부분 제작 예정 ( unknown )
